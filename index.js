@@ -13,10 +13,7 @@ const getTodo = async (id) => {
 const init = async () => {
   console.time('init');
   try {
-    const promises = [];
-    for (let i = 2; i <= 40; i += 2) {
-      promises.push(getTodo(i));
-    }
+    const promises = Array.from({ length: 20 }, (_, index) => getTodo((index + 1) * 2));
     const todos = await Promise.all(promises);
     todos.forEach((todo) => console.log(`${todo.title} - ${todo.completed}`));
   } catch (error) {
