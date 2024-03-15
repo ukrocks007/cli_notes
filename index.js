@@ -10,10 +10,12 @@ const getTodo = async (id) => {
 const init = async () => {
   console.time('init');
   try {
+    const promises = [];
     for (let i = 2; i <= 40; i += 2) {
-      const todo = await getTodo(i);
-      console.log(`${todo.title} - ${todo.completed}`);
+      promises.push(getTodo(i));
     }
+    const todos = await Promise.all(promises);
+    todos.forEach((todo) => console.log(`${todo.title} - ${todo.completed}`));
   } catch (error) {
     console.error(error);
   }
