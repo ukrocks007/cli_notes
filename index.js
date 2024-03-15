@@ -1,10 +1,13 @@
 const getTodo = async (id) => {
-  return new Promise((resolve, reject) => {
-    fetch(`https://jsonplaceholder.typicode.com/todos/${id}`)
-      .then((response) => response.json())
-      .then((json) => resolve(json))
-      .catch((error) => reject(error));
-  });
+  try {
+    const response = await fetch(`https://jsonplaceholder.typicode.com/todos/${id}`);
+    if (!response.ok) {
+      throw new Error('Failed to fetch todo');
+    }
+    return await response.json();
+  } catch (error) {
+    throw error;
+  }
 };
 
 const init = async () => {
