@@ -4,22 +4,16 @@
   "description": "A command line tool that consumes the first 20 even numbered TODO's in most performant way and output the title and whether it is completed or not.",
   "main": "index.js",
   "dependencies": {
-    "acorn": "^8.11.3",
-    "acorn-walk": "^8.3.2",
-    "arg": "^4.1.3",
-    "create-require": "^1.1.1",
-    "diff": "^4.0.2",
-    "make-error": "^1.3.6",
-    "ts-node": "^10.9.2",
-    "tsc": "^2.0.4",
-    "typescript": "^5.4.2",
-    "undici-types": "^5.26.5",
-    "v8-compile-cache-lib": "^3.0.1",
-    "yn": "^3.1.1"
+    "ts-node": "10.9.2",
+    "tsc": "2.0.4",
+    "typescript": "5.4.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "jest": "29.7.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "cover": "jest --coverage"
   },
   "author": "ukrocks007",
   "license": "ISC"
