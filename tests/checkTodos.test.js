@@ -1,4 +1,4 @@
-const { checkTodos } = require("./lib");
+const { checkTodos } = require("../lib");
 
 describe("checkTodos", () => {
   // Fetches todos successfully in parallel mode

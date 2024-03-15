@@ -1,5 +1,5 @@
 const { json } = require("stream/consumers");
-const { getTodo } = require("./lib");
+const { getTodo } = require("../lib");
 
 describe("getTodo", () => {
   // Successfully fetches a todo with valid id and returns it

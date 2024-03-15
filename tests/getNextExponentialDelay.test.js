@@ -1,4 +1,4 @@
-const { getNextExponentialDelay } = require("./lib");
+const { getNextExponentialDelay } = require("../lib");
 
 describe("getNextExponentialDelay", () => {
   // Returns a delay twice as long as the input delay

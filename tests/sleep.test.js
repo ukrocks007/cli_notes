@@ -1,4 +1,4 @@
-const { sleep } = require("./lib");
+const { sleep } = require("../lib");
 
 describe("sleep", () => {
   // Sleep for a given number of milliseconds
