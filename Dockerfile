@@ -10,3 +10,4 @@ RUN npm ci
 COPY *.js .
 
 ENTRYPOINT ["node", "index.js"]
+CMD []
