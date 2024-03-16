@@ -8,6 +8,7 @@ A command line tool that fetches and displays the first 20 even numbered TODO's 
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Docker](#docker)
 - [Testing](#testing)
 - [Contributing](#contributing)
 - [License](#license)
@@ -24,6 +25,7 @@ TODO at index 2 can be accessed at: https://jsonplaceholder.typicode.com/todos/2
 
 - Node.js
 - npm
+- Docker (Only for [Docker](#docker))
 
 ## Installation
 
@@ -83,6 +85,29 @@ To run the cli in parallel mode you can run,
 
 ```bash
 node index.js
+```
+
+## Docker
+
+You can build the docker image using
+
+```bash
+docker build -t cli .
+```
+
+This will create a docker image with `cli` tag.
+
+You can run the docker image using
+
+```bash
+docker run cli
+```
+
+To pass command line arguments to cli you can run like following
+
+```bash
+docker run cli -h
+docker run cli -s
 ```
 
 ## Testing
